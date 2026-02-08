@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Reporting Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fraud Reporting Dashboard</h1>
+    </header>
+    <main>
+        <section id="report-list">
+            <h2>Reports</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Reports will be populated here -->
+                </tbody>
+            </table>
+        </section>
+        <section id="report-form">
+            <h2>Submit New Report</h2>
+            <form>
+                <label for="report-description">Description:</label>
+                <input type="text" id="report-description" name="description" required>
+                <label for="report-date">Date:</label>
+                <input type="date" id="report-date" name="date" required>
+                <button type="submit">Submit Report</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Fraud Reporting Dashboard</p>
+    </footer>
+</body>
+</html>
