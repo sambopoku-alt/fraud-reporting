@@ -1,29 +1,56 @@
-.dashboard {
-    background-color: #f9f9f9;
-    font-family: Arial, sans-serif;
-    padding: 20px;
+/** Filtering Styles **/
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.card {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 10px 0;
-    padding: 15px;
-    background: white;
+.filter-option {
+    margin-right: 15px;
 }
 
-.card h2 {
-    color: #333;
+/** Search Styles **/
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    text-align: center;
-    text-decoration: none;
+/** Status Badges **/
+.status-badge {
     display: inline-block;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.status-badge.success {
+    background-color: #28a745;
+}
+
+.status-badge.error {
+    background-color: #dc3545;
+}
+
+.status-badge.warning {
+    background-color: #ffc107;
+}
+
+/** Report Card Styles **/
+.report-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.report-card h3 {
+    margin: 0 0 10px;
+}
+
+.report-card p {
+    margin: 0;
 }
