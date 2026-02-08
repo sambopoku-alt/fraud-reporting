@@ -4,42 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fraud Reporting Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        nav { background-color: #333; color: white; padding: 1em; }
+        nav a { margin: 0 15px; color: white; text-decoration: none; }
+        .tab { display: none; }
+        .active { display: block; }
+    </style>
 </head>
 <body>
-    <header>
+    <nav>
+        <a href="#dashboard" onclick="showTab('dashboard')">Dashboard</a>
+        <a href="#reports" onclick="showTab('reports')">Reports</a>
+        <a href="#jokes" onclick="showTab('jokes')">Jokes</a>
+    </nav>
+    <div id="dashboard" class="tab active">
         <h1>Fraud Reporting Dashboard</h1>
-    </header>
-    <main>
-        <section id="report-list">
-            <h2>Reports</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Date</th>
-                        <th>Description</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Reports will be populated here -->
-                </tbody>
-            </table>
-        </section>
-        <section id="report-form">
-            <h2>Submit New Report</h2>
-            <form>
-                <label for="report-description">Description:</label>
-                <input type="text" id="report-description" name="description" required>
-                <label for="report-date">Date:</label>
-                <input type="date" id="report-date" name="date" required>
-                <button type="submit">Submit Report</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Fraud Reporting Dashboard</p>
-    </footer>
+        <p>Statistics & analytics overview</p>
+    </div>
+    <div id="reports" class="tab">
+        <h2>Report Submission</h2>
+        <form>
+            <label for="report">Describe the fraud:</label><br />
+            <textarea id="report" name="report" rows="4" required></textarea><br />
+            <button type="submit">Submit Report</button>
+        </form>
+    </div>
+    <div id="jokes" class="tab">
+        <h2>Joke Generator</h2>
+        <button onclick="generateJoke()">Tell me a joke</button>
+        <p id="joke"></p>
+        <script>
+            function showTab(tabName) {
+                var tabs = document.querySelectorAll('.tab');
+                tabs.forEach(tab => tab.classList.remove('active'));
+                document.getElementById(tabName).classList.add('active');
+            }
+            function generateJoke() {
+                // Placeholder for joke generation logic
+                document.getElementById('joke').innerText = "Why did the fraudster cross the road? To get to the other side of the law!";
+            }
+        </script>
+    </div>
 </body>
 </html>
