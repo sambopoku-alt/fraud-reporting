@@ -1,0 +1,1 @@
+{\n  "name": "fraud-reporting",\n  "version": "1.0.0",\n  "description": "A fraud reporting application using Express",\n  "main": "index.js",\n  "scripts": {\n    "start": "node index.js"\n  },\n  "dependencies": {\n    "express": "^4.17.1",\n    "mongoose": "^5.10.9",\n    "body-parser": "^1.19.0",\n    "cors": "^2.8.5"\n  }\n}
